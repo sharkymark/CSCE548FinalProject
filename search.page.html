@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Search</ion-title>
+   	<ion-searchbar searchIcon = "search" 
+   		animated 
+   		showCancelButton="focus"
+   		placeholder = "Search by Title"
+   		 autocorrect='on' 
+   		 [(ng-Model)]="queryText" 
+   		 (ionInput) = 'searchWords()'></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<!--Need to add a on click link for the country to be taken to the search by country page-->
+		<ion-item *ngFor='let country of counrties'>
+			<ion-label padding>
+				{{country.name}}
+			</ion-label>
+		</ion-item>
+</ion-content>
